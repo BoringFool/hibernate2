@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- name:表示的是该类的相对路径 table：表示的是数据库的表名 -->
+	<class name="com.zm.mode.User" table="AUser">
+		<!-- type:表示该属性是int类型 column:映射的是数据库中的列名 native:根据底层数据库的能力选择identity, sequence 
+			或者hilo中的一个,就是根据数据库生成 -->
+		<id name="sid" type="int">
+			<column name="Id" />
+			<generator class="native" />
+		</id>
+		<property name="sname" type="java.lang.String">
+			<column name="SNAME" />
+		</property>
+		<property name="sage" type="int">
+			<column name="SAGE" />
+		</property>
+	</class>
+</hibernate-mapping>
